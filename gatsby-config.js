@@ -1,9 +1,5 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Amy & Chance Wedding',
-    description:
-      'Welcome to Amy Adair and Chance Cocker\'s Wedding Website! View photos, directions, registry details and more at The Knot.',
-  },
+  siteMetadata: require("./site-meta-data.json"),
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',

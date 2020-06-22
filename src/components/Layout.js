@@ -7,7 +7,7 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, headerimage } = useSiteMetadata()
   return (
     <div>
       <Helmet>
@@ -33,14 +33,9 @@ const TemplateWrapper = ({ children }) => {
           sizes="16x16"
         />
 
-        <link
-          rel="mask-icon"
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
-        />
         <meta name="theme-color" content="#fff" />
 
-        <meta property="og:type" content="business.business" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta
@@ -48,6 +43,9 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
+      {!!headerimage && (
+        <img src={headerimage} alt="Header Image" />
+      )}
       <Navbar />
       <div>{children}</div>
       <Footer />
