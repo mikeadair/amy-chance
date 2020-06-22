@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Amy & Chance Wedding',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Welcome to Amy Adair and Chance Cocker\'s Wedding Website! View photos, directions, registry details and more at The Knot.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
